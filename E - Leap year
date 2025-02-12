@@ -1,0 +1,38 @@
+//E - Leap year
+#include<stdio.h>
+
+// int leapYear(int year)
+// {
+//     if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+//     {
+//         return 1;
+//     }
+// }
+int notLeapYear(int year)
+{
+    while (!((year % 4 == 0 && year % 100 != 0) || year % 400 == 0))
+    {
+        year++;
+    }
+    return year;
+}
+int main()
+{
+    int t, year;
+    scanf("%d", &t);
+
+    while (t--)
+    {
+        scanf("%d", &year);
+
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+        { 
+            printf("It is a leap year.\n");
+        }
+        else
+        {
+            int next = notLeapYear(year); 
+            printf("Not a leap year. Suggested: %d\n", next); 
+        }
+    } 
+}
