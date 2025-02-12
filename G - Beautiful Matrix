@@ -1,0 +1,35 @@
+//G - Beautiful Matrix
+/*NEED TO KNOW-
+The Manhattan Distance:
+  In matrix, if i want to move any (row, col) to any specific (S_row , S_col). Then, to count the total moves to go
+  that specific row and col from any row and col the formula is:
+
+    = |row - S_row | + |col - S_col|
+
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int num[5][5];
+    int row, col;
+
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = 0; j < 5; j++)
+        {
+            scanf("%d", &num[i][j]);
+            if (num[i][j] == 1) {
+                row = i;
+                col = j;
+            }
+        }
+    }
+    int minMoves = abs(row - 2) + abs(col - 2);
+
+    printf("%d", minMoves);
+
+    return 0;
+}
