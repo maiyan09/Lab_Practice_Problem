@@ -1,0 +1,23 @@
+//C - Circle in Square
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int t;
+    scanf("%d", &t);
+
+    double pi = 2 * acos(0.0);
+
+    for (int i = 1; i <= t; i++)
+    {
+        double a;
+        scanf("%lf", &a);
+
+        double areaCicle = pi * a * a;
+        double areaSquare = 4 * a * a;
+        double area = areaSquare - areaCicle;
+
+        printf("Case %d: %.2lf\n",i, area);
+    }
+}
