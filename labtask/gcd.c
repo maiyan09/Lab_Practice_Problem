@@ -1,21 +1,20 @@
 #include <stdio.h>
 
-int main()
-{
-    int num1, num2, gcd;
+int main() {
+    int num1, num2;
     scanf("%d %d", &num1, &num2);
+
+    int n1 = num1;
+    int n2 = num2;
     
-    int small = (num1 < num2) ? num1 : num2;
-    
-    for (int i = 1; i <= small; i++)
+    while (num2 != 0)
     {
-        if (num1 % i == 0 && num2 % i == 0)
-        {
-            gcd = i;
-        }
+        int rem = num1 % num2;
+        num1 = num2;
+        num2 = rem;
     }
-    printf("GCD is: %d\n", gcd);
-  //printf("LCM is: %d\n", (num1*num2)/gcd);
-    
+    printf("GCD is: %d\n", num1);
+    //printf("LCM is: %d\n", (n1*n2)/num1);
+
     return 0;
 }
