@@ -1,3 +1,5 @@
+//A strong number is a positive integer where the sum of the factorials of its digits equals the original number
+//    145= 1! + 4! + 5! = 1 + 24 + 120 = 145 
 #include <stdio.h>
 int main()
 {
