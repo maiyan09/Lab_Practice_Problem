@@ -7,7 +7,7 @@ int main()
 	FILE *file = fopen("allEven.txt", "w");
 
 	if (file == NULL) {
-		printf("Error opening file.\n");
+		printf("File doesn't exist.\n");
 		return 1;
 	}
 	else
