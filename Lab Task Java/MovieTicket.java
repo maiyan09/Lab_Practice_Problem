@@ -6,8 +6,9 @@ public class MovieTicket {
 
     //default constructor
     MovieTicket() {
-        movieName = "Leo Messi";
-        showTime = "2 am";
+        // this.movieName = "Leo Messi";
+        // this.showTime = "2 am";
+        // this.availableSeats = 0;
     }
     //Constructor with movie name and show time
     MovieTicket(String movieName, String showTime) {
@@ -20,6 +21,7 @@ public class MovieTicket {
         this.showTime = showTime;
         this.availableSeats = availableSeats;
     }
+    //Method For Booking Ticket
     void bookTickets(int numberOfTickets) {
         if (availableSeats >= numberOfTickets && numberOfTickets > 0) {
             availableSeats -= numberOfTickets;
