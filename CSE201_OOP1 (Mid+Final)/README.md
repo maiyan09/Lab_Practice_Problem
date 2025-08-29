@@ -1,11 +1,11 @@
 University Java Exam Solutions
 ==============================
 
-This folder contains my solved Java programming questions from university midterm and final exams. Each file is named according to a specific pattern for easy identification of the class, semester, and question number.
+This folder contains my solved Java programming questions from University of Asia Pacific midterm and final exams.
+Each file is named according to a specific pattern for easy identification of the class, semester, and question number.
 
 Naming Convention
 -----------------
-
 Each .java file follows the format:
 
     ClassNameSemesterYear_QuestionNumber
@@ -37,7 +37,7 @@ These solutions may include topics such as:
 - File Handling
 - Exception Handling
 - Arrays and ArrayLists
-- Java GUI (Swing / AWT)
+- Java Basics
 - Recursion
 - Basic Algorithms and Logic Building
 
