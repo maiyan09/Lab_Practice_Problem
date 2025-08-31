@@ -6,8 +6,19 @@ public class BookStoreCT2 {
     double discount;
 
     BookStoreCT2 (String bookTitle, double pricePerBook, int stock, double discount) {
-        this.bookTitle = bookTitle;
-        this.pricePerBook = pricePerBook;
+        if (bookTitle.length() == 0) {
+            this.bookTitle = "Untitled";
+        }
+        else {
+            this.bookTitle = bookTitle;
+        } 
+        if (pricePerBook <= 0) {
+            this.pricePerBook = 100.0;
+        }
+        else {
+            this.pricePerBook = pricePerBook;
+        }
+        
         this.stock = stock;
         this.discount = discount;
     }
