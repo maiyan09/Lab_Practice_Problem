@@ -7,6 +7,7 @@ public class OnlineShopping {
     int productStock;
     //boolean availability;
     double price;
+    int x;
 
     OnlineShopping (ArrayList <Integer> productId, int productStock, double price) {
         this.productId = productId;
@@ -14,11 +15,12 @@ public class OnlineShopping {
         this.price = price;
     }
     public void shoppingCart(int id, int noOfAmount) {
-        if (noOfAmount > productStock) {
-            System.out.println("Invalid productAmount");
+        if ((noOfAmount > productStock) || (!productId.contains(id))) {
+            System.out.println("Invalid product ID or Out of stock");
         }
         else {
             System.out.println("Product "+ id + " added to cart");
+            x = id;
             productId.remove(Integer.valueOf(id));
             productAmount = productAmount + noOfAmount;
             productStock -= noOfAmount;
@@ -35,7 +37,9 @@ public class OnlineShopping {
     }
     public void removeCart(int id) {
         System.out.println("Product "+ id + " removed from the cart");
-        productId.add(id);
+        if (x == id) {
+            productId.add(id);
+        }
     }
     public double price() {
         return productAmount*price;
