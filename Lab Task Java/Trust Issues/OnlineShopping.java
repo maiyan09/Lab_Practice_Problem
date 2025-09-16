@@ -7,7 +7,7 @@ public class OnlineShopping {
     int productStock;
     //boolean availability;
     double price;
-    int x;
+    int unknownId;
 
     OnlineShopping (ArrayList <Integer> productId, int productStock, double price) {
         this.productId = productId;
@@ -20,7 +20,7 @@ public class OnlineShopping {
         }
         else {
             System.out.println("Product "+ id + " added to cart");
-            x = id;
+            unknownId = id;
             productId.remove(Integer.valueOf(id));
             productAmount = productAmount + noOfAmount;
             productStock -= noOfAmount;
@@ -35,10 +35,11 @@ public class OnlineShopping {
             return false;
        }
     }
-    public void removeCart(int id) {
+    public void removeCart(int id, int noOfAmount) {
         System.out.println("Product "+ id + " removed from the cart");
-        if (x == id) {
+        if (unknownId == id) {
             productId.add(id);
+            productAmount -= noOfAmount;
         }
     }
     public double price() {
