@@ -11,6 +11,7 @@ public class Shopping {
         productId.add(103);
         productId.add(104);
         productId.add(105);
+        productId.add(106);
         // System.out.println("Available product id: " + productId);
 
         OnlineShopping s = new OnlineShopping(productId, productId.size(), 50);
@@ -22,6 +23,7 @@ public class Shopping {
             System.out.println("3. Remove product");
             System.out.println("4. Total cost");
             System.out.println("5. Display available product");
+            System.out.println("6. Exit");
 
             System.out.print("Enter your option: ");
             int option = sc.nextInt();
@@ -38,18 +40,23 @@ public class Shopping {
                     System.out.println("Available product id: " + productId);
                     System.out.print("Enter product id : ");
                     int id2 = sc.nextInt();
-                    System.out.println("Available in stock: ?" + s.availableStock(id2));
+                    System.out.println("Available in stock: " + s.availableStock(id2));
                     break;
                 case 3:
-                    System.out.print("Enter product id you want to remove: ");
+                    System.out.print("Enter product id and amount you want to remove: ");
                     int id3 = sc.nextInt();
-                    s.removeCart(id3);
+                    int amount3 = sc.nextInt();
+                    s.removeCart(id3, amount3);
                     break;
                 case 4:
                     System.out.println("Total cost: " + s.price());
                     break;
                 case 5: 
                     s.display();
+                    break;
+                case 6:
+                    System.out.println("Exit");
+                    break;
                 default:
                     System.out.println("Invalid option");
                     break;
