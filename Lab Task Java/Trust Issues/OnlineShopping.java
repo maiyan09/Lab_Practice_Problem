@@ -2,12 +2,12 @@ import java.util.ArrayList;
 
 public class OnlineShopping {
     ArrayList <Integer> productId = new ArrayList<>();
+    ArrayList <Integer> productIdCopy = new ArrayList<>();
     //String productName;
     int productAmount;
     int productStock;
     //boolean availability;
     double price;
-    int unknownId;
 
     OnlineShopping (ArrayList <Integer> productId, int productStock, double price) {
         this.productId = productId;
@@ -20,7 +20,7 @@ public class OnlineShopping {
         }
         else {
             System.out.println("Product "+ id + " added to cart");
-            unknownId = id;
+            productIdCopy.add(id);
             productId.remove(Integer.valueOf(id));
             productAmount = productAmount + noOfAmount;
             productStock -= noOfAmount;
@@ -36,10 +36,13 @@ public class OnlineShopping {
        }
     }
     public void removeCart(int id, int noOfAmount) {
-        System.out.println("Product "+ id + " removed from the cart");
-        if (unknownId == id) {
-            productId.add(id);
-            productAmount -= noOfAmount;
+        if (productIdCopy.contains(id)) {
+                System.out.println("Product "+ id + " removed from the cart");
+                productId.add(id);
+                productAmount -= noOfAmount;
+        }
+        else {
+            System.out.println("Invalid ID");
         }
     }
     public double price() {
