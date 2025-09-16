@@ -5,6 +5,7 @@ public class Shopping {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ArrayList <Integer> productId = new ArrayList<>();
+        
         productId.add(100);
         productId.add(101);
         productId.add(102);
@@ -12,7 +13,7 @@ public class Shopping {
         productId.add(104);
         productId.add(105);
         productId.add(106);
-        // System.out.println("Available product id: " + productId);
+        //ArrayList <Integer> productIdCopy = productId;
 
         OnlineShopping s = new OnlineShopping(productId, productId.size(), 50);
 
@@ -56,7 +57,7 @@ public class Shopping {
                     break;
                 case 6:
                     System.out.println("Exit");
-                    break;
+                    return;
                 default:
                     System.out.println("Invalid option");
                     break;
