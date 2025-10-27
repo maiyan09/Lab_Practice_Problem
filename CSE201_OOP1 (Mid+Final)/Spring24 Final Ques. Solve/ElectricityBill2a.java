@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ElectricityBill {
+public class ElectricityBill2a {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Total number of units consume:  ");
